@@ -9,7 +9,7 @@ export default function Home(props) {
                 {dynamicDateString} (dinamico)
             </div>
             <div>
-                {props.staticDateString} (estatico - com delay)
+                {props.staticDateString} (estatico)
             </div>
             
         </div>
@@ -19,7 +19,7 @@ export default function Home(props) {
 export async function getStaticProps(){
     console.log("delay 5 seg")
 
-    await delay(5000)
+    // await delay(5000)
     const staticDate = new Date()
     const staticDateString = staticDate.toGMTString()
 
